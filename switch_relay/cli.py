@@ -7,7 +7,7 @@ from math import trunc
 from time import sleep
 from multiprocessing import Process, Queue
 
-from .mapping import BUTTONS, TRIGGERS, STICKS, DPAD_X, DPAD_Y
+from switch_relay.mapping import BUTTONS, TRIGGERS, STICKS, DPAD_X, DPAD_Y
 
 os.environ["SDL_VIDEODRIVER"] = "dummy"
 
@@ -18,7 +18,6 @@ switch = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 
 def send(data):
-    print(data)
     switch.sendall((data + "\r\n").encode())
 
 

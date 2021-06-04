@@ -21,3 +21,4 @@ pygame = "^2.0.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
+pyinstaller = "^4.3"
